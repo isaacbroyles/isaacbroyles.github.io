@@ -1,15 +1,17 @@
 ---
 layout: post
 title: "How to effectively use Model Mapper"
+excerpt_separator: <!--more-->
 tags:
   - java
   - model mapper
 ---
 
-
 I had the pleasure of modifying a large code base that extensively used [Model Mapper](http://modelmapper.org/). I ran into some issues using it blindly, and I did not have much luck searching for answers. Most of the information in this blog posts already exists elsewhere, but I was suprised that it was not very visible on google. Hopefully we can correct that.
 
 Here are my tips for effective use of ModelMapper.
+
+<!--more-->
 
 ## Use and understand PropertyMap
 
