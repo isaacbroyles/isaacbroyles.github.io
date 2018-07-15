@@ -10,6 +10,24 @@ twitter:
   username: isaacbroyles
   card: summary
 logo: /assets/images/isaac_broyles_bw.png
+social:
+  name: Isaac Broyles
+  links:
+    - https://github.com/isaacbroyles
+    - https://www.linkedin.com/in/isaacbroyles/
+    - https://twitter.com/isaacbroyles
+    - https://www.facebook.com/isaacbroyles
+    - https://plus.google.com/+IsaacBroyles
+    - https://keybase.io/isaacbroyles
+    - http://youtube.com/c/IsaacBroyles
+    - https://stackoverflow.com/users/977549/isaac-broyles
+    - https://www.instagram.com/isaacbroyles/
+webmaster_verifications:
+  google: DqeN0Z1Vx-FCZ-80zzg0NSTfxl2r1WYFY-Pj6vXW50Q
+  # bing: 1234
+  # alexa: 1234
+  # yandex: 1234
+  # baidu: 1234
 plugins:
   - jekyll-feed
   - jekyll-gist
