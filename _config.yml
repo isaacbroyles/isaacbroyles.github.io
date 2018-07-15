@@ -5,3 +5,4 @@ google_analytics:
 theme: jekyll-theme-hydeout
 repository: 'isaacbroyles/isaacbroyles.github.io'
 include: [".well-known"]
+paginate: 5
