@@ -1,7 +1,7 @@
 title: home | isaac broyles
 description: Software Engineering
 show_downloads: true
-google_analytics:
+google_analytics: 'UA-122362865-1'
 repository: 'isaacbroyles/isaacbroyles.github.io'
 include: [".well-known"]
 paginate: 5
