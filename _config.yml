@@ -2,6 +2,6 @@ title: home | isaac broyles
 description: isaac broyles home
 show_downloads: true
 google_analytics:
-theme: jekyll-theme-minimal
+theme: jekyll-theme-hydeout
 repository: 'isaacbroyles/isaacbroyles.github.io'
 include: [".well-known"]
