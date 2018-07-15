@@ -1,13 +1,18 @@
-title: home | isaac broyles
-description: Software Engineering
+title: isaac broyles | home
+description: Isaac Broyles site featuring articles about Software Engineering
 show_downloads: true
 google_analytics: 'UA-122362865-1'
 repository: 'isaacbroyles/isaacbroyles.github.io'
 include: [".well-known"]
 paginate: 5
 url: "https://www.isaacbroyles.com"
+twitter:
+  username: isaacbroyles
+  card: summary
+logo: /assets/images/isaac_broyles_bw.png
 plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-seo-tag

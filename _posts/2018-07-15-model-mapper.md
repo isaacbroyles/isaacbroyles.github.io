@@ -2,6 +2,7 @@
 layout: post
 title: "How to effectively use Model Mapper"
 excerpt_separator: <!--more-->
+author: isaacbroyles
 tags:
   - java
   - model mapper
