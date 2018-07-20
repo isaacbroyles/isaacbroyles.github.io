@@ -29,7 +29,7 @@ public class MyMapper extends PropertyMap<Source, Destination>{
 }
 {% endhighlight %}
 
-The reason why this is confusing, is why would I "set" my destination property to null? 
+The reason why this is confusing, is why would I "set" my destination property to null?
 
 ### The configure() function contains EDSL
 
@@ -67,7 +67,7 @@ I cover unit testing in the next section, but bring it up here because it can re
 For example, if you were to naively define a `PropertyMap` without running any tests, you might end up with something as verbose as this:
 
 {% highlight java %}
-public class OverkillPropertyMap 
+public class OverkillPropertyMap
         extends PropertyMap<PersonDto, Person> {
 
     @Override
@@ -106,7 +106,7 @@ The handy method will verify that all destination properties are matched. This i
 
 If you are getting false positives here, you can skip properties in your mapping:
 
-```
+```Java
 skip(destination.getPropertyNotMapped());
 ```
 
@@ -132,7 +132,7 @@ public class PersonMapTests {
     public void map_ShouldValidate_IfObjectsValid(){
         var personDto = preparePersonDto();
 
-        var personModel = 
+        var personModel =
             modelMapper.map(personDto, Person.class);
 
         modelMapper.validate();
@@ -178,11 +178,13 @@ public class PersonMapTests {
 
 In running this unit test, I get an error like this:
 
+<!-- markdownlint-disable MD040 MD031 -->
 ```
 1) Unmapped destination properties found in TypeMap[PersonDto -> Person]:
 
 com.isaacbroyles.examples.modelmapperexamples.models.Person.setLastModified()
 ```
+<!-- markdownlint-enable MD040 MD031 -->
 
 Uh oh, the `validate()` method is showing us that we have a destination property that is not mapped. So let's define a `PropertyMap` to fix that issue.
 
@@ -192,7 +194,7 @@ Here is the property map, with just the minimal code to fix my error:
 public class PersonMap extends PropertyMap<PersonDto, Person> {
     @Override
     protected void configure() {
-        map(source.getDateCreated(), 
+        map(source.getDateCreated(),
             destination.getLastModified());
     }
 }
@@ -210,5 +212,5 @@ Regardless, I thought this post would prove useful to others who are in a codeba
 
 ## Related Links
 
-* [ModelMapper](http://modelmapper.org/) - The official ModelMapper website. 
+* [ModelMapper](http://modelmapper.org/) - The official ModelMapper website.
 * [Excellent StackOverflow answer](https://stackoverflow.com/a/44534173) - I saw this great answer, which prompted me to dig in deeper to get more understanding about ModelMapper's inner workings.
