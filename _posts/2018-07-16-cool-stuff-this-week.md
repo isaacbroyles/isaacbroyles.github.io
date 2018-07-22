@@ -3,11 +3,12 @@ layout: post
 title: "Cool Stuff I Found This Week"
 excerpt_separator: <!--more-->
 author: isaacbroyles
+last_modified_at: 2018-07-22T23:09:22+00:00
 categories:
-  - Cool Stuff
+  - cool-stuff
 ---
 
-This is all the cool stuff I found this week. 
+This is all the cool stuff I found this week.
 
 <!--more-->
 

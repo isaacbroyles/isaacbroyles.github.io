@@ -1,5 +1,5 @@
-<!-- ---
+---
 layout: category
 title: Cool Stuff
-category: Cool Stuff
---- -->
+category: cool-stuff
+---
