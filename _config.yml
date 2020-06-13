@@ -1,11 +1,12 @@
 title: isaac broyles | home
 description: Isaac Broyles' personal site featuring articles about Software Engineering
 show_downloads: true
-google_analytics: 'UA-122362865-1'
-repository: 'isaacbroyles/isaacbroyles.github.io'
+google_analytics: "UA-122362865-1"
+repository: "isaacbroyles/isaacbroyles.github.io"
 include: [".well-known"]
 paginate: 5
 url: "https://www.isaacbroyles.com"
+author: isaacbroyles
 twitter:
   username: isaacbroyles
   card: summary
@@ -31,3 +32,9 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
+  defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      image: /assets/images/Profile.png
