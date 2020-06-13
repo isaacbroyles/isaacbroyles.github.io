@@ -59,3 +59,5 @@ The accessories are (from left-to-right, top-to-bottom):
 - [HyperX Cloud Flight Headset](https://www.amazon.com/gp/product/B077ZGRY9V/ref=as_li_ss_tl?ie=UTF8&psc=1&linkCode=ll1&tag=isaacbroyle07-20&linkId=e37096ebb9d20d5d3ca36aa54e2f663e&language=en_US){:target="\_blank"}
 - [Corsair K63 Wireless Mechanical Keyboard with Lapboard](https://www.amazon.com/CORSAIR-Wireless-Mechanical-Keyboard-Backlit/dp/B07CL8B7RN/ref=as_li_ss_tl?dchild=1&keywords=corsair+lapboard&qid=1592066645&sr=8-2&linkCode=ll1&tag=isaacbroyle07-20&linkId=cacb69870762fbf9d86e5ee1782790d4&language=en_US){:target="\_blank"}
 - [Logitech G502 Lightspeed](https://www.amazon.com/Logitech-Lightspeed-PowerPlay-Compatible-Lightsync/dp/B07L4BM851/ref=as_li_ss_tl?crid=3JW3N298URSHY&dchild=1&keywords=logitech+g502+lightspeed&qid=1592066755&sprefix=logitech+g50,aps,211&sr=8-3&linkCode=ll1&tag=isaacbroyle07-20&linkId=263d1893d6a3c8fbfa5507b7cf2644ef&language=en_US){:target="\_blank"}
+
+Note: Amazon referral links are used in product links.
