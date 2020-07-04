@@ -3,10 +3,14 @@ layout: post
 title: "Building Unity with GitHub Actions"
 excerpt_separator: <!--more-->
 author: isaacbroyles
+image: /assets/images/2020-07-04-unity-github-actions/unity.png
+categories:
+  - gamedev
 tags:
   - unity
   - github
   - github actions
+  - gamedev
 ---
 
 I recently began doing some work on a personal project in [Unity Engine](https://store.unity.com/download-nuo). As with any of my projects, the first thing I set up is a working CI pipeline for it. I find doing this early reinforces best practices. I liked the option of using GitHub Actions, since it is a relatively small project. Here's how I did it!
