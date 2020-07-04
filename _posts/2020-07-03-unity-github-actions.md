@@ -83,7 +83,7 @@ Create a secret called `UNITY_LICENSE` and add the contents of the obtained lice
 
 Now that this step is done, you can delete the `.github/workflows/activation.yml` file.
 
-### Step 4 - Set up workflow
+## Set up workflow
 
 Now's the fun stuff! Now that you have your license ready to go, you can start setting up actions.
 
