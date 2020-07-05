@@ -151,7 +151,7 @@ It then uploads artifacts, zips up the binaries, creates a GitHub release for th
 
 Depending on your usage, you might not want to upload the artifacts. You'll quickly run into limits if you use it too much.
 
-`.github/workflows/test.yml:`
+`.github/workflows/main.yml:`
 
 <!-- prettier-ignore-start -->
 {% highlight yaml %}
