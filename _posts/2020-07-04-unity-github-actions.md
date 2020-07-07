@@ -13,7 +13,7 @@ tags:
   - gamedev
 ---
 
-I recently began doing some work on a personal project in [Unity Engine](https://store.unity.com/download-nuo). As with any of my projects, the first thing I set up is a working CI pipeline for it. I find doing this early reinforces best practices. I liked the option of using GitHub Actions, since it is a relatively small project. Here's how I did it!
+I recently began doing some work on a personal project in [Unity Engine](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-plus). As with any of my projects, the first thing I set up is a working CI pipeline for it. I find doing this early reinforces best practices. I liked the option of using GitHub Actions, since it is a relatively small project. Here's how I did it!
 
 <!--more-->
 
@@ -244,5 +244,7 @@ A good side effect, is if I have to let projects idle for a while, I can always 
 
 ## Related Links
 
-- [Unity Engine](https://store.unity.com/download-nuo) - The Unity download site
+- [Unity Plus](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-plus) - [Unity Pro](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-pro)
 - [Github - Unity Actions](https://github.com/webbertakken/unity-actions) - Unity Actions for GitHub
+
+Note: Unity referral links are used in product links.
