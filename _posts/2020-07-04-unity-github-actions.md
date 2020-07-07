@@ -13,13 +13,13 @@ tags:
   - gamedev
 ---
 
-I recently began doing some work on a personal project in [Unity Engine](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-plus). As with any of my projects, the first thing I set up is a working CI pipeline for it. I find doing this early reinforces best practices. I liked the option of using GitHub Actions, since it is a relatively small project. Here's how I did it!
+I recently began doing some work on a personal project in [Unity Engine](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-plus){:target="\_blank"}. As with any of my projects, the first thing I set up is a working CI pipeline for it. I find doing this early reinforces best practices. I liked the option of using GitHub Actions, since it is a relatively small project. Here's how I did it!
 
 <!--more-->
 
 ## Getting Started
 
-First, familiarize yourself with the community offerings for GitHub Actions - [webbertakken/unity-actions](https://github.com/webbertakken/unity-actions). There's a good overview here in the readme of the supported actions.
+First, familiarize yourself with the community offerings for GitHub Actions - [webbertakken/unity-actions](https://github.com/webbertakken/unity-actions){:target="\_blank"}. There's a good overview here in the readme of the supported actions.
 
 The main thing you will need to start off with, as called out in the above README, is setting up your license.
 
@@ -71,7 +71,7 @@ You'll need to save this file locally for use in the next step.
 
 ### Step 2 - Request License from Unity
 
-Head over to the [Unity Manual Activation](https://license.unity3d.com/manual) link.
+Head over to the [Unity Manual Activation](https://license.unity3d.com/manual){:target="\_blank"} link.
 
 Here you simply upload your `.alf` file from the previous step. Fill out the form with your license details.
 
@@ -234,7 +234,7 @@ jobs:
 {% endhighlight %}
 <!-- prettier-ignore-end -->
 
-Feel free to customize for your use case, as this workflow only outputs windows binaries. However, as mentioned in [webbertakken/unity-actions](https://github.com/webbertakken/unity-actions), there's a ton more supported actions/options.
+Feel free to customize for your use case, as this workflow only outputs windows binaries. However, as mentioned in [webbertakken/unity-actions](https://github.com/webbertakken/unity-actions){:target="\_blank"}, there's a ton more supported actions/options.
 
 ## Conclusion
 
@@ -244,7 +244,7 @@ A good side effect, is if I have to let projects idle for a while, I can always 
 
 ## Related Links
 
-- [Unity Plus](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-plus) - [Unity Pro](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-pro)
-- [Github - Unity Actions](https://github.com/webbertakken/unity-actions) - Unity Actions for GitHub
+- [Unity Plus](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-plus){:target="\_blank"} - [Unity Pro](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-pro){:target="\_blank"}
+- [Github - Unity Actions](https://github.com/webbertakken/unity-actions){:target="\_blank"} - Unity Actions for GitHub
 
 Note: Unity referral links are used in product links.
