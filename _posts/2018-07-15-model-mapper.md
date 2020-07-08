@@ -3,6 +3,7 @@ layout: post
 title: "How to effectively use Model Mapper"
 excerpt_separator: <!--more-->
 author: isaacbroyles
+image: /assets/images/2018-07-15-model-mapper/model-mapper.png
 tags:
   - java
   - model mapper
@@ -20,6 +21,7 @@ The first thing you should understand are the nuances of configuring a PropertyM
 
 If you're like me, this first thing you'll run up against when searching for help is running across an unintuitive example like this:
 
+<!-- prettier-ignore-start -->
 {% highlight java %}
 public class MyMapper extends PropertyMap<Source, Destination>{
     @Override
@@ -28,6 +30,7 @@ public class MyMapper extends PropertyMap<Source, Destination>{
     }
 }
 {% endhighlight %}
+<!-- prettier-ignore-end -->
 
 The reason why this is confusing, is why would I "set" my destination property to null?
 
@@ -39,10 +42,11 @@ You can read more about how the EDSL works in the [official javadocs](http://mod
 
 This gist is this:
 
-* The mapping is not executed as Java code. The `PropertyMap.configure()` is not being executed during the mapping process. You can validate this by setting a breakpoint in the method while debugging a mapping.
-* The mapping is interpreted by ModelMapper when the mappings are added using `addMapping(...)`.
-* `Converter.convert()`'s **are** executing during runtime. So you can do something like this:
+- The mapping is not executed as Java code. The `PropertyMap.configure()` is not being executed during the mapping process. You can validate this by setting a breakpoint in the method while debugging a mapping.
+- The mapping is interpreted by ModelMapper when the mappings are added using `addMapping(...)`.
+- `Converter.convert()`'s **are** executing during runtime. So you can do something like this:
 
+<!-- prettier-ignore-start -->
 {% highlight java %}
 public class MyMapper extends PropertyMap<Source, Destination>{
     private Converter<String, String> toUppercase = (c) -> {
@@ -57,6 +61,7 @@ public class MyMapper extends PropertyMap<Source, Destination>{
     }
 }
 {% endhighlight %}
+<!-- prettier-ignore-end -->
 
 And the code in the `toUppercase` converter will be executed each time the objects are mapped.
 
@@ -66,6 +71,7 @@ I cover unit testing in the next section, but bring it up here because it can re
 
 For example, if you were to naively define a `PropertyMap` without running any tests, you might end up with something as verbose as this:
 
+<!-- prettier-ignore-start -->
 {% highlight java %}
 public class OverkillPropertyMap
         extends PropertyMap<PersonDto, Person> {
@@ -86,6 +92,7 @@ public class OverkillPropertyMap
     }
 }
 {% endhighlight %}
+<!-- prettier-ignore-end -->
 
 This is a contrived example that can seem silly to an experienced developer, but you'd be surprised at how many mappings like these pop up in codebases.
 
@@ -116,6 +123,7 @@ Going back to the example from the last section, except let's start with a unit 
 
 A standard unit test would look something like this:
 
+<!-- prettier-ignore-start -->
 {% highlight java %}
 public class PersonMapTests {
     private ModelMapper modelMapper;
@@ -175,21 +183,25 @@ public class PersonMapTests {
     }
 }
 {% endhighlight %}
+<!-- prettier-ignore-end -->
 
 In running this unit test, I get an error like this:
 
 <!-- markdownlint-disable MD040 MD031 -->
+
 ```
 1) Unmapped destination properties found in TypeMap[PersonDto -> Person]:
 
 com.isaacbroyles.examples.modelmapperexamples.models.Person.setLastModified()
 ```
+
 <!-- markdownlint-enable MD040 MD031 -->
 
 Uh oh, the `validate()` method is showing us that we have a destination property that is not mapped. So let's define a `PropertyMap` to fix that issue.
 
 Here is the property map, with just the minimal code to fix my error:
 
+<!-- prettier-ignore-start -->
 {% highlight java %}
 public class PersonMap extends PropertyMap<PersonDto, Person> {
     @Override
@@ -199,6 +211,7 @@ public class PersonMap extends PropertyMap<PersonDto, Person> {
     }
 }
 {% endhighlight %}
+<!-- prettier-ignore-end -->
 
 Now I rerun my test -- Oh cool, it passes now.
 
@@ -212,5 +225,5 @@ Regardless, I thought this post would prove useful to others who are in a codeba
 
 ## Related Links
 
-* [ModelMapper](http://modelmapper.org/) - The official ModelMapper website.
-* [Excellent StackOverflow answer](https://stackoverflow.com/a/44534173) - I saw this great answer, which prompted me to dig in deeper to get more understanding about ModelMapper's inner workings.
+- [ModelMapper](http://modelmapper.org/) - The official ModelMapper website.
+- [Excellent StackOverflow answer](https://stackoverflow.com/a/44534173) - I saw this great answer, which prompted me to dig in deeper to get more understanding about ModelMapper's inner workings.
