@@ -225,6 +225,8 @@ jobs:
 Note: If you're using the above workflow, and experience an error on the build step like this:
 
 <!-- prettier-ignore-start -->
+{% highlight yaml %}
+{% raw %}
 Warning: Changes were made to the following files and folders:
 
 Warning: ?? artifacts/
