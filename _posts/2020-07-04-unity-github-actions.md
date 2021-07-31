@@ -215,6 +215,7 @@ jobs:
         with:
           files: StandaloneWindows64.zip
           name: Release ${{ github.ref }}
+
 {% endraw %}
 {% endhighlight %}
 <!-- prettier-ignore-end -->
