@@ -15,8 +15,6 @@ tags:
   - gamedev
 ---
 
-Updated: 
-
 I recently began doing some work on a personal project in [Unity Engine](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-plus){:target="\_blank"}. As with any of my projects, the first thing I set up is a working CI pipeline for it. I find doing this early reinforces best practices. I liked the option of using GitHub Actions, since it is a relatively small project. Here's how I did it!
 
 <!--more-->
