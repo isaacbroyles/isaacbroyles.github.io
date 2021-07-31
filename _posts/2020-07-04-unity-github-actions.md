@@ -4,6 +4,7 @@ title: "Building Unity with GitHub Actions"
 excerpt_separator: <!--more-->
 author: isaacbroyles
 image: /assets/images/2020-07-04-unity-github-actions/unity.png
+last_modified_at: 2021-07-31T21:19:22+00:00
 categories:
   - gamedev
 tags:
@@ -13,19 +14,21 @@ tags:
   - gamedev
 ---
 
+Updated: 
+
 I recently began doing some work on a personal project in [Unity Engine](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-plus){:target="\_blank"}. As with any of my projects, the first thing I set up is a working CI pipeline for it. I find doing this early reinforces best practices. I liked the option of using GitHub Actions, since it is a relatively small project. Here's how I did it!
 
 <!--more-->
 
 ## Getting Started
 
-First, familiarize yourself with the community offerings for GitHub Actions - [webbertakken/unity-actions](https://github.com/webbertakken/unity-actions){:target="\_blank"}. There's a good overview here in the readme of the supported actions.
+First, familiarize yourself with the community offerings for GitHub Actions - [game-ci/unity-actions](https://github.com/game-ci/unity-actions){:target="\_blank"}. There's a good overview here in the readme of the supported actions.
 
-The main thing you will need to start off with, as called out in the above README, is setting up your license.
+The other thing to check would be the official [game-ci getting starting docs](https://game.ci/docs/github/getting-started).
 
 ## Setting up License
 
-The instructions in the `unity-actions` README aren't the most verbose, but it's actually quite simple.
+The instructions in the official docs aren't the most verbose, but it's actually quite simple.
 
 I'll just go into a little more detail here to try to make things super clear.
 
@@ -41,29 +44,27 @@ The file should end up looking something like this:
 {% highlight yaml %}
 {% raw %}
 name: Acquire activation file
-on: [push]
+on:
+  workflow_dispatch: {}
 jobs:
   activation:
     name: Request manual activation file 🔑
     runs-on: ubuntu-latest
     steps:
-        # Request manual activation file
-        - name: Request manual activation file
-          id: getManualLicenseFile
-          uses: webbertakken/unity-request-manual-activation-file@v1.1
-          with:
-            unityVersion: 2019.3.14f1
-        # Upload artifact (Unity_v20XX.X.XXXX.alf)
-        - name: Expose as artifact
-          uses: actions/upload-artifact@v1
-          with:
-            name: ${{ steps.getManualLicenseFile.outputs.filePath }}
-            path: ${{ steps.getManualLicenseFile.outputs.filePath }} 
-{% endraw %}
+      # Request manual activation file
+      - name: Request manual activation file
+        id: getManualLicenseFile
+        uses: game-ci/unity-request-activation-file@v2
+      # Upload artifact (Unity_v20XX.X.XXXX.alf)
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
 {% endhighlight %}
 <!-- prettier-ignore-end -->
 
-After you push it up, GitHub will run this action and generate a file as an artifact.
+After you push it up, you can [manually run the worofklow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow) to generate your license.
 
 To find this file, go to `GitHub` > `Your Repository` > `Actions`. Click on the commit that last ran. You should find a file named something like `Unity_v2019.3.14f1.alf`. (The exact name depends on the version string that you put in `unityVersion` above.)
 
@@ -120,7 +121,7 @@ jobs:
     name: Test project
     runs-on: ubuntu-latest
     steps:
-    
+
       # Checkout
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -128,16 +129,16 @@ jobs:
           lfs: true
     
       # Cache
-      - uses: actions/cache@v1.1.0
+      - uses: actions/cache@v2
         with:
           path: Library
           key: Library
 
       # Test
       - name: Run tests
-        uses: webbertakken/unity-test-runner@v1.3
+        uses: game-ci/unity-test-runner@v2
         with:
-          unityVersion: 2019.3.14f1
+          unityVersion: 2020.3.15f2
 
 {% endraw %}
 {% endhighlight %}
@@ -171,7 +172,7 @@ jobs:
     name: Build my project
     runs-on: ubuntu-latest
     steps:
-    
+
       # Checkout
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -179,26 +180,26 @@ jobs:
           lfs: true
     
       # Cache
-      - uses: actions/cache@v1.1.0
+      - uses: actions/cache@v2
         with:
           path: Library
           key: Library
 
       # Test
       - name: Run tests
-        uses: webbertakken/unity-test-runner@v1.3
+        uses: game-ci/unity-test-runner@v2
         with:
-          unityVersion: 2019.3.14f1
+          unityVersion: 2020.3.15f2
 
       # Build
       - name: Build project
-        uses: webbertakken/unity-builder@v0.10
+        uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 2019.3.14f1
+          unityVersion: 2020.3.15f2
           targetPlatform: StandaloneWindows64 
 
       # Output 
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: Build
           path: build
@@ -209,32 +210,32 @@ jobs:
           zip -r ../../StandaloneWindows64.zip .
           popd
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./StandaloneWindows64.zip
-          asset_name: StandaloneWindows64.zip
-          asset_content_type: application/zip
+          files: StandaloneWindows64.zip
+          name: Release ${{ github.ref }}
 {% endraw %}
 {% endhighlight %}
 <!-- prettier-ignore-end -->
 
-Feel free to customize for your use case, as this workflow only outputs windows binaries. However, as mentioned in [webbertakken/unity-actions](https://github.com/webbertakken/unity-actions){:target="\_blank"}, there's a ton more supported actions/options.
+Note: If you're using the above workflow, and experience an error on the build step like this:
+
+<!-- prettier-ignore-start -->
+Warning: Changes were made to the following files and folders:
+
+Warning: ?? artifacts/
+
+Error: Branch is dirty. Refusing to base semantic version on uncommitted changes
+{% endraw %}
+{% endhighlight %}
+<!-- prettier-ignore-end -->
+
+You will need to add the artifacts folder to your `.gitignore` file, as referenced in [this GitHub issue](https://github.com/game-ci/unity-builder/issues/241).
+
+Another option would be using the [allowDirtyBuild](https://game.ci/docs/github/builder#allowdirtybuild) flag if you are still running into dirty branch issues.
+
+Feel free to customize for your use case, as this workflow only outputs windows binaries. However, as mentioned in [game-ci/unity-actions](https://github.com/game-ci/unity-actions){:target="\_blank"}, there's a ton more supported actions/options.
 
 ## Conclusion
 
@@ -245,6 +246,6 @@ A good side effect, is if I have to let projects idle for a while, I can always 
 ## Related Links
 
 - [Unity Plus](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-plus){:target="\_blank"} - [Unity Pro](https://prf.hn/click/camref:1100ldaXB/destination:https://store.unity.com/products/unity-pro){:target="\_blank"}
-- [Github - Unity Actions](https://github.com/webbertakken/unity-actions){:target="\_blank"} - Unity Actions for GitHub
+- [Github - Unity Actions](https://github.com/game-ci/unity-actions){:target="\_blank"} - Unity Actions for GitHub
 
 Note: Unity referral links are used in product links.
