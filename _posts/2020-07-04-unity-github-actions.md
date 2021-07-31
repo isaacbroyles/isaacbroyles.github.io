@@ -65,7 +65,7 @@ jobs:
 {% endhighlight %}
 <!-- prettier-ignore-end -->
 
-After you push it up, you can [manually run the worofklow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow) to generate your license.
+After you push it up, you can [manually run the worfklow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow) to generate your license.
 
 To find this file, go to `GitHub` > `Your Repository` > `Actions`. Click on the commit that last ran. You should find a file named something like `Unity_v2019.3.14f1.alf`. (The exact name depends on the version string that you put in `unityVersion` above.)
 
@@ -85,7 +85,7 @@ This is your license you will put in GitHub secrets for use in your build action
 
 Open `GitHub` > `Your Repository` > `Settings` > `Secrets`.
 
-Create a secret called `UNITY_LICENSE` and add the contents of the obtained license file (`.ulf`).
+Create a secret called `UNITY_LICENSE` and add the contents of the obtained license file (`.ulf`). Yes, add the entire XML contents to the GitHub secret.
 
 Now that this step is done, you can delete the `.github/workflows/activation.yml` file.
 
@@ -96,6 +96,7 @@ Now's the fun stuff! Now that you have your license ready to go, you can start s
 A couple of best practice recommendations:
 
 - Cache your `Library` folder. This is where all your cached packages and large files end up during builds.
+  - Note caches created on branches are scoped to that branch, regardless of key matches. Same goes for tags.
 - Use GitHub Releases to store your file, _not_ actions artifacts. You will quickly run into free limits using artifacts
 - Due to the size and time of full builds, I like to generate target builds only on tags.
 
