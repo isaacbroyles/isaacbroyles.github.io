@@ -61,6 +61,8 @@ jobs:
         with:
           name: ${{ steps.getManualLicenseFile.outputs.filePath }}
           path: ${{ steps.getManualLicenseFile.outputs.filePath }}
+
+{% endraw %}
 {% endhighlight %}
 <!-- prettier-ignore-end -->
 
