@@ -2,6 +2,7 @@ title: isaac broyles | home
 description: Isaac Broyles' personal site featuring articles about Software Engineering
 show_downloads: true
 google_analytics: "UA-122362865-1"
+google_analytics_ga: "G-NL6JWRCQY3"
 repository: "isaacbroyles/isaacbroyles.github.io"
 include: [".well-known"]
 paginate: 5
