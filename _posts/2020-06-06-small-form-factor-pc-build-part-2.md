@@ -4,6 +4,9 @@ title: "Small Form Factor PC Build Part 2"
 excerpt_separator: <!--more-->
 author: isaacbroyles
 image: /assets/images/2020-06-06-small-form-factor-pc-build-part-2/IMG_2136.jpg
+last_modified_at: 2022-06-12T20:18:16+0000
+date: 2020-06-06T20:18:16+0000
+permalink: /video-games/2020/06/06/small-form-factor-pc-build-part-2.html
 categories:
   - video-games
 tags:
@@ -29,15 +32,15 @@ Here is the build I ended up with:
 
 | Type                                                                      | Item                                                                                                                                                                                                                                                                           |
 | :------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **CPU**                                                                   | [Intel Core i7-8700K 3.7 GHz 6-Core Processor](https://www.amazon.com/gp/product/B07598VZR8/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07598VZR8&linkCode=as2&tag=isaacbroyle07-20&linkId=5adb5cc405cb57d8c8ca5192a239f66a){:target="\_blank"}                 |
-| **CPU Cooler**                                                            | [Noctua NH-U9S 46.44 CFM CPU Cooler](https://www.amazon.com/gp/product/B00TBHYYFK/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00TBHYYFK&linkCode=as2&tag=isaacbroyle07-20&linkId=b3a10a233e28c71343646e805367f620){:target="\_blank"}                           |
-| **Motherboard**                                                           | [Gigabyte Z370N WIFI Mini ITX LGA1151 Motherboard](https://www.amazon.com/gp/product/B07BQCZNKB/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07BQCZNKB&linkCode=as2&tag=isaacbroyle07-20&linkId=fb7de321ece2b6df2d1b1462248d991a){:target="\_blank"}             |
-| **Memory**                                                                | [Corsair Vengeance LPX 16 GB (2 x 8 GB) DDR4-2400 CL16 Memory](https://www.amazon.com/gp/product/B0134EW7G8/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0134EW7G8&linkCode=as2&tag=isaacbroyle07-20&linkId=ef6db1a9ac118f02317a1752eb5889ac){:target="\_blank"} |
-| **Storage**                                                               | [Crucial MX500 1 TB M.2-2280 Solid State Drive](https://www.amazon.com/gp/product/B077SF8KMG/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B077SF8KMG&linkCode=as2&tag=isaacbroyle07-20&linkId=49a678a5d45e578ec9bf8f649892a4dd){:target="\_blank"}                |
-| **Video Card**                                                            | [EVGA GeForce GTX 1080 Ti 11 GB Black Edition Video Card](https://www.amazon.com/gp/product/B07MFN49TK/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07MFN49TK&linkCode=as2&tag=isaacbroyle07-20&linkId=aa89bf9ebb77459ad0044313e51e2a85){:target="\_blank"}      |
-| **Case**                                                                  | [Thermaltake Core V1 Mini ITX Desktop Case](https://www.amazon.com/gp/product/B00M2UKGSM/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00M2UKGSM&linkCode=as2&tag=isaacbroyle07-20&linkId=77f601bd1c5011d71d01d5793b898652){:target="\_blank"}                    |
-| **Power Supply**                                                          | [Silverstone 450 W 80+ Bronze Certified SFX Power Supply](https://www.amazon.com/gp/product/B07WFX3FZ5/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07WFX3FZ5&linkCode=as2&tag=isaacbroyle07-20&linkId=148888d9dd3abe19d2f1484caba0acdb){:target="\_blank"}      |
-| **Case Fan**                                                              | [Noctua NF-A20 PWM 86.46 CFM 200 mm Fan](https://www.amazon.com/gp/product/B081YC4V6S/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B081YC4V6S&linkCode=as2&tag=isaacbroyle07-20&linkId=3e31b3d909ad8b6d516def6e20cbba4b){:target="\_blank"}                       |
+| **CPU**                                                                   | [Intel Core i7-8700K 3.7 GHz 6-Core Processor](https://amzn.to/3xuQ0Vs){:target="\_blank"}                 |
+| **CPU Cooler**                                                            | [Noctua NH-U9S 46.44 CFM CPU Cooler](https://amzn.to/3NLZ7b4){:target="\_blank"}                           |
+| **Motherboard**                                                           | [Gigabyte Z370N WIFI Mini ITX LGA1151 Motherboard](https://amzn.to/3NYiWfa){:target="\_blank"}             |
+| **Memory**                                                                | [Corsair Vengeance LPX 16 GB (2 x 8 GB) DDR4-2400 CL16 Memory](https://amzn.to/3zxQxZb){:target="\_blank"} |
+| **Storage**                                                               | [Crucial MX500 1 TB M.2-2280 Solid State Drive](https://amzn.to/3MGUOfL){:target="\_blank"}                |
+| **Video Card**                                                            | [EVGA GeForce GTX 1080 Ti 11 GB Black Edition Video Card](https://amzn.to/3zwXXfe){:target="\_blank"}      |
+| **Case**                                                                  | [Thermaltake Core V1 Mini ITX Desktop Case](https://amzn.to/39iLrp7){:target="\_blank"}                    |
+| **Power Supply**                                                          | [Silverstone 450 W 80+ Bronze Certified SFX Power Supply](https://amzn.to/3O6UKqQ){:target="\_blank"}      |
+| **Case Fan**                                                              | [Noctua NF-A20 PWM 86.46 CFM 200 mm Fan](https://amzn.to/3HhfwBS){:target="\_blank"}                       |
 | _Total is approximate price of all components as of time of this writing_ |
 | **Total**                                                                 | **\$1820.00**                                                                                                                                                                                                                                                                  |
 
