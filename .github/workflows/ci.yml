@@ -37,11 +37,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Picks up rules from .markdownlint.json.
-      - uses: DavidAnson/markdownlint-cli2-action@v20
+      - uses: actions/setup-node@v4
         with:
-          globs: |
-            **/*.md
-            #vendor
-            #node_modules
-            #_site
+          node-version: lts/*
+          cache: npm
+
+      - run: npm ci
+
+      # Same pinned markdownlint-cli2 as the local hook; rules from .markdownlint.json.
+      - run: npm run lint:md

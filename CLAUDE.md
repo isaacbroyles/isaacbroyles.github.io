@@ -15,7 +15,7 @@ bundle exec jekyll build       # one-off build
 JEKYLL_ENV=production bundle exec jekyll build   # build with analytics enabled
 ```
 
-There are no tests. `.github/workflows/ci.yml` runs on pull requests: it builds the site, runs html-proofer on `_site` (internal links and images only; `bundle exec htmlproofer ./_site --disable-external --no-enforce-https` locally), and lints Markdown with markdownlint-cli2 using `.markdownlint.json` (MD002 and MD013/line-length disabled). html-proofer is in the Gemfile's `:test` group.
+There are no tests. `.github/workflows/ci.yml` runs on pull requests: it builds the site, runs html-proofer on `_site` (internal links and images only; `bundle exec htmlproofer ./_site --disable-external --no-enforce-https` locally), and lints Markdown with `npm run lint:md` (markdownlint-cli2, pinned in `package.json`, rules from `.markdownlint.json` with MD002 and MD013/line-length disabled). html-proofer is in the Gemfile's `:test` group. Run `npm install` once to get the linter; a Claude Code `PostToolUse` hook (`.claude/hooks/markdownlint.sh`, wired in `.claude/settings.json`) lints each Markdown file after Claude edits it and reports errors back.
 
 The Gemfile uses Jekyll 4.3 with explicitly listed plugins (not the `github-pages` gem). Plugins are declared in the Gemfile's `:jekyll_plugins` group and enabled under `plugins:` in `_config.yml`; keep the two in sync.
 
