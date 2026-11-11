@@ -31,7 +31,6 @@ webmaster_verifications:
   bing: 413A3B73496AD7A36C780F6503A74820
 plugins:
   - jekyll-feed
-  - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
