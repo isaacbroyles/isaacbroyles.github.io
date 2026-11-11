@@ -27,19 +27,19 @@ Here is the build I ended up with:
 
 [PCPartPicker Part List](https://pcpartpicker.com/list/Ys4Phy)
 
-| Type                                                                      | Item                                                                                                                                                                                                                                                                           |
-| :------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **CPU**                                                                   | [Intel Core i7-8700K 3.7 GHz 6-Core Processor](https://amzn.to/3xuQ0Vs){:target="\_blank"}                 |
-| **CPU Cooler**                                                            | [Noctua NH-U9S 46.44 CFM CPU Cooler](https://amzn.to/3NLZ7b4){:target="\_blank"}                           |
-| **Motherboard**                                                           | [Gigabyte Z370N WIFI Mini ITX LGA1151 Motherboard](https://amzn.to/3NYiWfa){:target="\_blank"}             |
-| **Memory**                                                                | [Corsair Vengeance LPX 16 GB (2 x 8 GB) DDR4-2400 CL16 Memory](https://amzn.to/3zxQxZb){:target="\_blank"} |
-| **Storage**                                                               | [Crucial MX500 1 TB M.2-2280 Solid State Drive](https://amzn.to/3MGUOfL){:target="\_blank"}                |
-| **Video Card**                                                            | [EVGA GeForce GTX 1080 Ti 11 GB Black Edition Video Card](https://amzn.to/3zwXXfe){:target="\_blank"}      |
-| **Case**                                                                  | [Thermaltake Core V1 Mini ITX Desktop Case](https://amzn.to/39iLrp7){:target="\_blank"}                    |
-| **Power Supply**                                                          | [Silverstone 450 W 80+ Bronze Certified SFX Power Supply](https://amzn.to/3O6UKqQ){:target="\_blank"}      |
-| **Case Fan**                                                              | [Noctua NF-A20 PWM 86.46 CFM 200 mm Fan](https://amzn.to/3HhfwBS){:target="\_blank"}                       |
-| _Total is approximate price of all components as of time of this writing_ |
-| **Total**                                                                 | **\$1820.00**                                                                                                                                                                                                                                                                  |
+| Type | Item |
+| :--- | :--- |
+| **CPU** | [Intel Core i7-8700K 3.7 GHz 6-Core Processor](https://amzn.to/3xuQ0Vs){:target="\_blank"} |
+| **CPU Cooler** | [Noctua NH-U9S 46.44 CFM CPU Cooler](https://amzn.to/3NLZ7b4){:target="\_blank"} |
+| **Motherboard** | [Gigabyte Z370N WIFI Mini ITX LGA1151 Motherboard](https://amzn.to/3NYiWfa){:target="\_blank"} |
+| **Memory** | [Corsair Vengeance LPX 16 GB (2 x 8 GB) DDR4-2400 CL16 Memory](https://amzn.to/3zxQxZb){:target="\_blank"} |
+| **Storage** | [Crucial MX500 1 TB M.2-2280 Solid State Drive](https://amzn.to/3MGUOfL){:target="\_blank"} |
+| **Video Card** | [EVGA GeForce GTX 1080 Ti 11 GB Black Edition Video Card](https://amzn.to/3zwXXfe){:target="\_blank"} |
+| **Case** | [Thermaltake Core V1 Mini ITX Desktop Case](https://amzn.to/39iLrp7){:target="\_blank"} |
+| **Power Supply** | [Silverstone 450 W 80+ Bronze Certified SFX Power Supply](https://amzn.to/3O6UKqQ){:target="\_blank"} |
+| **Case Fan** | [Noctua NF-A20 PWM 86.46 CFM 200 mm Fan](https://amzn.to/3HhfwBS){:target="\_blank"} |
+| _Total is approximate price of all components as of time of this writing_ | |
+| **Total** | **\$1820.00** |
 
 Here is the finished product, nicely tucked in my entertainment center under my primary TV. The PS4 goes unused nowadays!
 

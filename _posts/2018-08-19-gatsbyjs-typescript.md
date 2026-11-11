@@ -27,7 +27,7 @@ There are other starters for typescript, but they have quite a bit more "feature
 
 After some investigation, it appeared the recommended way for strongly-typing your GraphQL query models, was to generate types using the [gql-gen](https://github.com/dotansimha/graphql-code-generator) tool.
 
-Following the documentation [here](https://github.com/dotansimha/graphql-code-generator#installation), I installed a few dev dependencies into my project:
+Following the [graphql-code-generator installation docs](https://github.com/dotansimha/graphql-code-generator#installation){:target="_blank"}, I installed a few dev dependencies into my project:
 
 ```bash
 npm install --save-dev graphql-code-generator graphql
@@ -50,13 +50,13 @@ As you can see here, I'm outputting my type definitions to `/src/graphql.d.ts`.
 
 From here, it's pretty simple to import the types into your React components:
 
-{% highlight typescript %}
+```typescript
 import { MyType } from '../graphql';
-{% endhighlight %}
+```
 
 Now you have strongly typed models in your Typescript React components!
 
-{% highlight typescript %}
+```typescript
 interface IndexPageProps {
   theme: Theme;
   data: {
@@ -79,4 +79,4 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
     );
   }
 }
-{% endhighlight %}
+```
