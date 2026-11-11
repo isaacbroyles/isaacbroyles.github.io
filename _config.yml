@@ -1,6 +1,5 @@
 title: isaac broyles | home
 description: Isaac Broyles' personal site featuring articles about Software Engineering
-show_downloads: true
 google_analytics_ga: "G-NL6JWRCQY3"
 repository: "isaacbroyles/isaacbroyles.github.io"
 include: [".well-known"]
@@ -19,7 +18,6 @@ social:
     - https://www.linkedin.com/in/isaacbroyles/
     - https://twitter.com/isaacbroyles
     - https://www.facebook.com/isaacbroyles
-    - https://plus.google.com/+IsaacBroyles
     - https://keybase.io/isaacbroyles
     - http://youtube.com/c/IsaacBroyles
     - https://stackoverflow.com/users/977549/isaac-broyles
