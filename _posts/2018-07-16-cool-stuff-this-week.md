@@ -1,8 +1,5 @@
 ---
-layout: post
 title: "Cool Stuff I Found This Week"
-excerpt_separator: <!--more-->
-author: isaacbroyles
 last_modified_at: 2018-07-22T23:09:22+00:00
 categories:
   - cool-stuff

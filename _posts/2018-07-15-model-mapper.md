@@ -1,8 +1,5 @@
 ---
-layout: post
 title: "How to effectively use Model Mapper"
-excerpt_separator: <!--more-->
-author: isaacbroyles
 image: /assets/images/2018-07-15-model-mapper/model-mapper.png
 tags:
   - java

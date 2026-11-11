@@ -1,8 +1,5 @@
 ---
-layout: post
 title: "Podcasts to Listen to"
-excerpt_separator: <!--more-->
-author: isaacbroyles
 categories:
   - cool-stuff
 tags:

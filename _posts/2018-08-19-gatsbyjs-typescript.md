@@ -1,8 +1,5 @@
 ---
-layout: post
 title: "Working in GatsbyJS with Typescript Pt. 1"
-excerpt_separator: <!--more-->
-author: isaacbroyles
 tags:
   - typescript
   - gatsbyjs

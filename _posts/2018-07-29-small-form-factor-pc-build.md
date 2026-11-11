@@ -1,8 +1,5 @@
 ---
-layout: post
 title: "Small Form Factor PC Build Part 1"
-excerpt_separator: <!--more-->
-author: isaacbroyles
 categories:
   - video-games
 tags:

@@ -37,3 +37,10 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       image: /assets/images/Profile.jpg
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: isaacbroyles
+      excerpt_separator: <!--more-->

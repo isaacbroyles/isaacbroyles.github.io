@@ -1,8 +1,5 @@
 ---
-layout: post
 title: "Small Form Factor PC Build Part 2"
-excerpt_separator: <!--more-->
-author: isaacbroyles
 image: /assets/images/2020-06-06-small-form-factor-pc-build-part-2/IMG_2136.jpg
 last_modified_at: 2022-06-12T20:18:16+0000
 date: 2020-06-06T20:18:16+0000

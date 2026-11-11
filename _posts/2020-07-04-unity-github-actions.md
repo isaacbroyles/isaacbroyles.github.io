@@ -1,8 +1,5 @@
 ---
-layout: post
 title: "Building Unity with GitHub Actions"
-excerpt_separator: <!--more-->
-author: isaacbroyles
 image: /assets/images/2020-07-04-unity-github-actions/unity.png
 last_modified_at: 2021-07-31T21:19:22+00:00
 date: 2021-07-31T21:19:22+00:00
