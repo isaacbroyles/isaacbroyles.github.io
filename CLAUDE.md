@@ -9,7 +9,7 @@ Personal blog/site (www.isaacbroyles.com) built with Jekyll and hosted on GitHub
 ## Commands
 
 ```sh
-bundle install                 # install github-pages gem + plugins (Gemfile.lock is gitignored)
+bundle install                 # install github-pages gem + plugins (versions pinned by the committed Gemfile.lock)
 bundle exec jekyll serve       # local dev server at http://localhost:4000, output in _site/
 bundle exec jekyll build       # one-off build
 JEKYLL_ENV=production bundle exec jekyll build   # build with analytics enabled
