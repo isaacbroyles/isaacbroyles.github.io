@@ -1,0 +1,58 @@
+# Single source for social profile links. Rendered as sidebar icons by
+# _includes/custom-icon-links.html and copied into site.social.links (used by
+# jekyll-seo-tag for JSON-LD sameAs) by _plugins/social_links.rb.
+- id: github-profile-link
+  title: Github
+  label: Github
+  icon: github
+  url: https://github.com/isaacbroyles
+- id: linkedin-link
+  title: LinkedIn
+  label: LinkedIn
+  icon: linkedin
+  url: https://www.linkedin.com/in/isaacbroyles/
+- id: twitter-link
+  title: Twitter
+  label: Twitter
+  icon: twitter
+  url: https://twitter.com/isaacbroyles
+- id: facebook-link
+  title: Facebook
+  label: Facebook
+  icon: facebook
+  url: https://www.facebook.com/isaacbroyles
+- id: keybase-link
+  title: Keybase
+  label: Keybase
+  icon: keybase
+  url: https://keybase.io/isaacbroyles
+- id: youtube-link
+  title: YouTube
+  label: YouTube
+  icon: youtube
+  url: https://www.youtube.com/c/IsaacBroyles
+- id: stackoverflow-link
+  title: Stack Overflow
+  label: Stack Overflow
+  icon: stackoverflow
+  url: https://stackoverflow.com/users/977549/isaac-broyles
+- id: instagram-art-link
+  title: Instagram Art
+  label: Instagram
+  icon: instagram
+  url: https://www.instagram.com/isaacbroyles.art/
+- id: instagram-photo-link
+  title: Instagram Photos
+  label: Instagram
+  icon: instagram
+  url: https://www.instagram.com/isaacbroyles/
+- id: dev-link
+  title: DEV
+  label: DEV
+  icon: dev
+  url: https://dev.to/isaacbroyles
+- id: tiktok-link
+  title: TikTok
+  label: TikTok
+  icon: tiktok
+  url: https://www.tiktok.com/@isaacbroyles.art

@@ -1,121 +1,13 @@
+{% for link in site.data.social %}
 <a
-  id="github-profile-link"
+  id="{{ link.id }}"
   class="icon"
-  title="Github"
-  aria-label="Github"
+  title="{{ link.title }}"
+  aria-label="{{ link.label }}"
   rel="me"
-  href="https://github.com/isaacbroyles"
+  href="{{ link.url }}"
   target="_blank"
 >
-  {% include svg/github.svg %}
+  {% include svg/{{ link.icon }}.svg %}
 </a>
-<a
-  id="linkedin-link"
-  class="icon"
-  title="LinkedIn"
-  aria-label="LinkedIn"
-  rel="me"
-  href="https://www.linkedin.com/in/isaacbroyles/"
-  target="_blank"
->
-  {% include svg/linkedin.svg %}
-</a>
-<a
-  id="twitter-link"
-  class="icon"
-  title="Twitter"
-  aria-label="Twitter"
-  rel="me"
-  href="https://twitter.com/isaacbroyles"
-  target="_blank"
->
-  {% include svg/twitter.svg %}
-</a>
-<a
-  id="facebook-link"
-  class="icon"
-  title="Facebook"
-  aria-label="Facebook"
-  rel="me"
-  href="https://www.facebook.com/isaacbroyles"
-  target="_blank"
->
-  {% include svg/facebook.svg %}
-</a>
-<a
-  id="keybase-link"
-  class="icon"
-  title="Keybase"
-  aria-label="Keybase"
-  rel="me"
-  href="https://keybase.io/isaacbroyles"
-  target="_blank"
->
-  {% include svg/keybase.svg %}
-</a>
-<a
-  id="youtube-link"
-  class="icon"
-  title="YouTube"
-  aria-label="YouTube"
-  rel="me"
-  href="https://www.youtube.com/c/IsaacBroyles"
-  target="_blank"
->
-  {% include svg/youtube.svg %}
-</a>
-<a
-  id="stackoverflow-link"
-  class="icon"
-  title="Stack Overflow"
-  aria-label="Stack Overflow"
-  rel="me"
-  href="https://stackoverflow.com/users/977549/isaac-broyles"
-  target="_blank"
->
-  {% include svg/stackoverflow.svg %}
-</a>
-<a
-  id="instagram-art-link"
-  class="icon"
-  title="Instagram Art"
-  aria-label="Instagram"
-  rel="me"
-  href="https://www.instagram.com/isaacbroyles.art/"
-  target="_blank"
->
-  {% include svg/instagram.svg %}
-</a>
-<a
-  id="instagram-photo-link"
-  class="icon"
-  title="Instagram Photos"
-  aria-label="Instagram"
-  rel="me"
-  href="https://www.instagram.com/isaacbroyles/"
-  target="_blank"
->
-  {% include svg/instagram.svg %}
-</a>
-<a
-  id="dev-link"
-  class="icon"
-  title="DEV"
-  aria-label="DEV"
-  rel="me"
-  href="https://dev.to/isaacbroyles"
-  target="_blank"
->
-  {% include svg/dev.svg %}
-</a>
-<a
-  id="tiktok-link"
-  class="icon"
-  title="TikTok"
-  aria-label="TikTok"
-  rel="me"
-  href="https://www.tiktok.com/@isaacbroyles.art"
-  target="_blank"
->
-  {% include svg/tiktok.svg %}
-</a>
+{% endfor %}
