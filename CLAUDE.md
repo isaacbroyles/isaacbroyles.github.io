@@ -21,7 +21,7 @@ Only plugins whitelisted by GitHub Pages work (the `github-pages` gem pins versi
 
 ## Content conventions
 
-- Posts live in `_posts/YYYY-MM-DD-slug.md`. Front matter typically includes `layout: post`, `title`, `excerpt_separator: <!--more-->`, `author: isaacbroyles`, `date`, `last_modified_at`, `categories`, `tags`, and often an explicit `permalink` (e.g. `/art-links`). Place `<!--more-->` after the intro to control the excerpt on the paginated index (`paginate: 5`).
+- Posts live in `_posts/YYYY-MM-DD-slug.md`. `layout: post`, `excerpt_separator: <!--more-->`, and the author come from `defaults`/`author` in `_config.yml`. Front matter typically includes `title`, `date`, `last_modified_at`, `categories`, `tags`, and often an explicit `permalink` (e.g. `/art-links`). Place `<!--more-->` after the intro to control the excerpt on the paginated index (`paginate: 5`).
 - Posts containing literal Liquid syntax (e.g. GitHub Actions `${{ }}` expressions) must wrap it in `{% raw %}...{% endraw %}`; a missing `endraw` breaks the build.
 - Categories: each category needs a page in `category/` with `layout: category` and a `category:` value matching the post's `categories` entry. These pages are auto-added to the sidebar via `_includes/category-links.html`.
 - Standalone pages (e.g. `about.md`) appear in the sidebar when their front matter has `sidebar_link: true` (`_includes/page-links.html`).
