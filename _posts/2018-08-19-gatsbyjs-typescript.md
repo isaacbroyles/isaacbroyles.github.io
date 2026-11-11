@@ -27,7 +27,7 @@ There are other starters for typescript, but they have quite a bit more "feature
 
 After some investigation, it appeared the recommended way for strongly-typing your GraphQL query models, was to generate types using the [gql-gen](https://github.com/dotansimha/graphql-code-generator) tool.
 
-Following the documentation [here](https://github.com/dotansimha/graphql-code-generator#installation), I installed a few dev dependencies into my project:
+Following the [graphql-code-generator installation docs](https://github.com/dotansimha/graphql-code-generator#installation){:target="_blank"}, I installed a few dev dependencies into my project:
 
 ```bash
 npm install --save-dev graphql-code-generator graphql
