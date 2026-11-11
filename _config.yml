@@ -14,18 +14,9 @@ twitter:
   username: isaacbroyles
   card: summary
 logo: /assets/images/isaac_broyles_bw.png
+# social.links is filled from _data/social.yml by _plugins/social_links.rb.
 social:
   name: Isaac Broyles
-  links:
-    - https://github.com/isaacbroyles
-    - https://www.linkedin.com/in/isaacbroyles/
-    - https://twitter.com/isaacbroyles
-    - https://www.facebook.com/isaacbroyles
-    - https://keybase.io/isaacbroyles
-    - http://youtube.com/c/IsaacBroyles
-    - https://stackoverflow.com/users/977549/isaac-broyles
-    - https://www.instagram.com/isaacbroyles/
-    - https://www.instagram.com/isaacbroyles.art/
 webmaster_verifications:
   google: DqeN0Z1Vx-FCZ-80zzg0NSTfxl2r1WYFY-Pj6vXW50Q
   bing: 413A3B73496AD7A36C780F6503A74820
