@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal blog/site (www.isaacbroyles.com) built with Jekyll and hosted on GitHub Pages. The theme is a vendored copy of **Hydeout** (layouts in `_layouts/`, partials in `_includes/`, styles in `_sass/hydeout/`), so theme changes are made directly in this repo rather than via a gem. There is no build pipeline beyond GitHub Pages; pushing to `master` deploys.
+Personal blog/site (www.isaacbroyles.com) built with Jekyll and hosted on GitHub Pages. The theme is a vendored copy of **Hydeout** (layouts in `_layouts/`, partials in `_includes/`, styles in `_sass/hydeout/`), so theme changes are made directly in this repo rather than via a gem. Pushing to `master` runs `.github/workflows/pages.yml`, which builds with `bundle exec jekyll build` (Ruby from `.ruby-version`, gems from `Gemfile.lock`) and deploys via GitHub Actions (Pages source must be set to "GitHub Actions").
 
 ## Commands
 
@@ -30,6 +30,6 @@ The Gemfile uses Jekyll 4.3 with explicitly listed plugins (not the `github-page
 
 ## Site wiring
 
-- `_config.yml` holds site metadata, social links, SEO/Twitter config, and the Google Analytics 4 ID. GA (gtag, `google_analytics_ga`) is only emitted when `jekyll.environment == 'production'` (see `_includes/google-analytics.html`), which GitHub Pages sets automatically.
+- `_config.yml` holds site metadata, social links, SEO/Twitter config, and the Google Analytics 4 ID. GA (gtag, `google_analytics_ga`) is only emitted when `jekyll.environment == 'production'` (see `_includes/google-analytics.html`), which the Pages workflow sets via `JEKYLL_ENV: production`.
 - Site customization hooks: `_includes/custom-head.html`, `custom-foot.html`, `custom-nav-links.html`, `custom-icon-links.html`.
 - `.well-known/` is explicitly included in the build via `include:` in `_config.yml` (Keybase verification); `CNAME` sets the custom domain.
