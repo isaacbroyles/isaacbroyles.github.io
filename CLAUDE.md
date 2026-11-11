@@ -9,7 +9,7 @@ Personal blog/site (www.isaacbroyles.com) built with Jekyll and hosted on GitHub
 ## Commands
 
 ```sh
-bundle install                 # install github-pages gem + plugins (versions pinned by the committed Gemfile.lock)
+bundle install                 # install Jekyll + plugins (versions pinned by the committed Gemfile.lock)
 bundle exec jekyll serve       # local dev server at http://localhost:4000, output in _site/
 bundle exec jekyll build       # one-off build
 JEKYLL_ENV=production bundle exec jekyll build   # build with analytics enabled
@@ -17,7 +17,7 @@ JEKYLL_ENV=production bundle exec jekyll build   # build with analytics enabled
 
 There are no tests. Markdown is linted with markdownlint using `.markdownlint.json` (MD002 and MD013/line-length disabled).
 
-Only plugins whitelisted by GitHub Pages work (the `github-pages` gem pins versions); plugins in use are listed under `plugins:` in `_config.yml`.
+The Gemfile uses Jekyll 4.3 with explicitly listed plugins (not the `github-pages` gem). Plugins are declared in the Gemfile's `:jekyll_plugins` group and enabled under `plugins:` in `_config.yml`; keep the two in sync.
 
 ## Content conventions
 
