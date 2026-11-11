@@ -19,14 +19,14 @@ The first thing you should understand are the nuances of configuring a PropertyM
 If you're like me, this first thing you'll run up against when searching for help is running across an unintuitive example like this:
 
 <!-- prettier-ignore-start -->
-{% highlight java %}
+```java
 public class MyMapper extends PropertyMap<Source, Destination>{
     @Override
     protected void configure(){
         map(source.getProperty()).setOther(null);
     }
 }
-{% endhighlight %}
+```
 <!-- prettier-ignore-end -->
 
 The reason why this is confusing, is why would I "set" my destination property to null?
@@ -44,7 +44,7 @@ This gist is this:
 - `Converter.convert()`'s **are** executing during runtime. So you can do something like this:
 
 <!-- prettier-ignore-start -->
-{% highlight java %}
+```java
 public class MyMapper extends PropertyMap<Source, Destination>{
     private Converter<String, String> toUppercase = (c) -> {
         return c.getSource().toUpperCase();
@@ -57,7 +57,7 @@ public class MyMapper extends PropertyMap<Source, Destination>{
             .setOther(null);
     }
 }
-{% endhighlight %}
+```
 <!-- prettier-ignore-end -->
 
 And the code in the `toUppercase` converter will be executed each time the objects are mapped.
@@ -69,7 +69,7 @@ I cover unit testing in the next section, but bring it up here because it can re
 For example, if you were to naively define a `PropertyMap` without running any tests, you might end up with something as verbose as this:
 
 <!-- prettier-ignore-start -->
-{% highlight java %}
+```java
 public class OverkillPropertyMap
         extends PropertyMap<PersonDto, Person> {
 
@@ -88,7 +88,7 @@ public class OverkillPropertyMap
 
     }
 }
-{% endhighlight %}
+```
 <!-- prettier-ignore-end -->
 
 This is a contrived example that can seem silly to an experienced developer, but you'd be surprised at how many mappings like these pop up in codebases.
@@ -110,7 +110,7 @@ The handy method will verify that all destination properties are matched. This i
 
 If you are getting false positives here, you can skip properties in your mapping:
 
-```Java
+```java
 skip(destination.getPropertyNotMapped());
 ```
 
@@ -121,7 +121,7 @@ Going back to the example from the last section, except let's start with a unit 
 A standard unit test would look something like this:
 
 <!-- prettier-ignore-start -->
-{% highlight java %}
+```java
 public class PersonMapTests {
     private ModelMapper modelMapper;
 
@@ -179,7 +179,7 @@ public class PersonMapTests {
                 .build();
     }
 }
-{% endhighlight %}
+```
 <!-- prettier-ignore-end -->
 
 In running this unit test, I get an error like this:
@@ -199,7 +199,7 @@ Uh oh, the `validate()` method is showing us that we have a destination property
 Here is the property map, with just the minimal code to fix my error:
 
 <!-- prettier-ignore-start -->
-{% highlight java %}
+```java
 public class PersonMap extends PropertyMap<PersonDto, Person> {
     @Override
     protected void configure() {
@@ -207,7 +207,7 @@ public class PersonMap extends PropertyMap<PersonDto, Person> {
             destination.getLastModified());
     }
 }
-{% endhighlight %}
+```
 <!-- prettier-ignore-end -->
 
 Now I rerun my test -- Oh cool, it passes now.

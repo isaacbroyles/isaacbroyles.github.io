@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal blog/site (www.isaacbroyles.com) built with Jekyll and hosted on GitHub Pages. The theme is a vendored copy of **Hydeout** (layouts in `_layouts/`, partials in `_includes/`, styles in `_sass/hydeout/`), so theme changes are made directly in this repo rather than via a gem. Pushing to `master` runs `.github/workflows/pages.yml`, which builds with `bundle exec jekyll build` (Ruby from `.ruby-version`, gems from `Gemfile.lock`) and deploys via GitHub Actions (Pages source must be set to "GitHub Actions").
+Personal blog/site (<https://www.isaacbroyles.com>) built with Jekyll and hosted on GitHub Pages. The theme is a vendored copy of **Hydeout** (layouts in `_layouts/`, partials in `_includes/`, styles in `_sass/hydeout/`), so theme changes are made directly in this repo rather than via a gem. Pushing to `master` runs `.github/workflows/pages.yml`, which builds with `bundle exec jekyll build` (Ruby from `.ruby-version`, gems from `Gemfile.lock`) and deploys via GitHub Actions (Pages source must be set to "GitHub Actions").
 
 ## Commands
 

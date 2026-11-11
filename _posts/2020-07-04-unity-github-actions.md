@@ -100,7 +100,7 @@ A couple of best practice recommendations:
 
 Here's an example of a couple of workflow files.
 
-#### Test - Runs on every commit
+### Test - Runs on every commit
 
 `.github/workflows/test.yml:`
 
@@ -144,7 +144,7 @@ jobs:
 {% endhighlight %}
 <!-- prettier-ignore-end -->
 
-#### Build - Runs on tagged commits
+### Build - Runs on tagged commits
 
 This file uses this `on.push.tags` trigger to only run when tags are pushed.
 

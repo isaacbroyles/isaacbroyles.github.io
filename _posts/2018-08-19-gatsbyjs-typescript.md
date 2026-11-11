@@ -50,13 +50,13 @@ As you can see here, I'm outputting my type definitions to `/src/graphql.d.ts`.
 
 From here, it's pretty simple to import the types into your React components:
 
-{% highlight typescript %}
+```typescript
 import { MyType } from '../graphql';
-{% endhighlight %}
+```
 
 Now you have strongly typed models in your Typescript React components!
 
-{% highlight typescript %}
+```typescript
 interface IndexPageProps {
   theme: Theme;
   data: {
@@ -79,4 +79,4 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
     );
   }
 }
-{% endhighlight %}
+```
