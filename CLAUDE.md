@@ -1,0 +1,35 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Overview
+
+Personal blog/site (www.isaacbroyles.com) built with Jekyll and hosted on GitHub Pages. The theme is a vendored copy of **Hydeout** (layouts in `_layouts/`, partials in `_includes/`, styles in `_sass/hydeout/`), so theme changes are made directly in this repo rather than via a gem. There is no build pipeline beyond GitHub Pages; pushing to `master` deploys.
+
+## Commands
+
+```sh
+bundle install                 # install github-pages gem + plugins (Gemfile.lock is gitignored)
+bundle exec jekyll serve       # local dev server at http://localhost:4000, output in _site/
+bundle exec jekyll build       # one-off build
+JEKYLL_ENV=production bundle exec jekyll build   # build with analytics enabled
+```
+
+There are no tests. Markdown is linted with markdownlint using `.markdownlint.json` (MD002 and MD013/line-length disabled).
+
+Only plugins whitelisted by GitHub Pages work (the `github-pages` gem pins versions); plugins in use are listed under `plugins:` in `_config.yml`.
+
+## Content conventions
+
+- Posts live in `_posts/YYYY-MM-DD-slug.md`. Front matter typically includes `layout: post`, `title`, `excerpt_separator: <!--more-->`, `author: isaacbroyles`, `date`, `last_modified_at`, `categories`, `tags`, and often an explicit `permalink` (e.g. `/art-links`). Place `<!--more-->` after the intro to control the excerpt on the paginated index (`paginate: 5`).
+- Posts containing literal Liquid syntax (e.g. GitHub Actions `${{ }}` expressions) must wrap it in `{% raw %}...{% endraw %}`; a missing `endraw` breaks the build.
+- Categories: each category needs a page in `category/` with `layout: category` and a `category:` value matching the post's `categories` entry. These pages are auto-added to the sidebar via `_includes/category-links.html`.
+- Standalone pages (e.g. `about.md`) appear in the sidebar when their front matter has `sidebar_link: true` (`_includes/page-links.html`).
+- External links in posts are written to open in a new tab (`target="_blank"`). Some posts contain affiliate links with a disclosure note.
+- Images go in `assets/images/`; the default social/SEO image is set via `defaults` in `_config.yml`.
+
+## Site wiring
+
+- `_config.yml` holds site metadata, social links, SEO/Twitter config, and the Google Analytics 4 ID. GA (gtag, `google_analytics_ga`) is only emitted when `jekyll.environment == 'production'` (see `_includes/google-analytics.html`), which GitHub Pages sets automatically.
+- Site customization hooks: `_includes/custom-head.html`, `custom-foot.html`, `custom-nav-links.html`, `custom-icon-links.html`.
+- `.well-known/` is explicitly included in the build via `include:` in `_config.yml` (Keybase verification); `CNAME` sets the custom domain.
