@@ -3,7 +3,7 @@ description: Isaac Broyles' personal site featuring articles about Software Engi
 google_analytics_ga: "G-NL6JWRCQY3"
 repository: "isaacbroyles/isaacbroyles.github.io"
 include: [".well-known"]
-exclude: ["CLAUDE.md", "LICENSE.md", ".markdownlint.json", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude: ["CLAUDE.md", "docs","LICENSE.md", ".markdownlint.json", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 paginate: 5
 url: "https://www.isaacbroyles.com"
 author:
