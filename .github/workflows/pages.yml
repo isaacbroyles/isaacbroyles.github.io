@@ -34,7 +34,10 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      # Unlike v3, this drops dotfiles by default; keep .well-known/ (Keybase verification).
       - uses: actions/upload-pages-artifact@v5
+        with:
+          include-hidden-files: true
 
   deploy:
     needs: build
