@@ -22,7 +22,7 @@ Findings:
 
 ## Phase 1: Quick wins
 
-- [ ] **T1.1 Fix the `<head>`** (`_includes/head.html`, `font-includes.html`, `favicons.html`)
+- [x] **T1.1 Fix the `<head>`** (`_includes/head.html`, `font-includes.html`, `favicons.html`)
   - Remove `X-UA-Compatible` and `maximum-scale=1`; use `<meta charset="utf-8">`.
   - Add `{{ site.baseurl }}` to the RSS link, or drop it since `{% feed_meta %}` from jekyll-feed already emits it.
   - Switch to the Fonts v2 URL with `&display=swap` and add `preconnect` to `fonts.gstatic.com`.
