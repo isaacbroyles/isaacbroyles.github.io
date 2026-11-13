@@ -123,7 +123,31 @@ Goals: dark mode, better reading typography, accessible links, and a stronger ho
   - [ ] (b) `npm run images` script using `sharp` to generate variants into `assets/images/...`.
   - [ ] (c) Migrate the two posts that use images.
 - [ ] **T5.3 Compressed CSS** via `sass: style: compressed` in `_config.yml`.
-- [ ] **T5.4 Lighthouse CI** with `treosh/lighthouse-ci-action` against the built `_site`; budgets perf ≥ 95, a11y = 100. Do after T4.4.
+- [ ] **T5.4 Lighthouse CI** (**Split**; do after T4.4, and ideally T5.1)
+  - Why it fits: the site is static, so `_site` can be audited with no server of our own (`staticDistDir`). Three runs on three URLs take about 1–2 minutes, and it runs as its own parallel job in `ci.yml`, so it doesn't lengthen the Jekyll build or the deploy workflow. Scores map to numeric assertions, so pass/fail is well defined.
+  - Scope: PR checks only. Don't gate `pages.yml` deploys on it, because a flaky perf score shouldn't block publishing.
+  - [ ] (a) Config and local run
+    - `npm i -D @lhci/cli` (pin the version) and add `"lhci": "lhci autorun"` to `package.json` scripts.
+    - Add `lighthouserc.json`: `collect.staticDistDir: "./_site"`, `numberOfRuns: 3` (the median is used), and `url` for `/index.html`, one post (pick a text-heavy one), and `/about/index.html`. Skip `404.html`: its HTTP 404 status trips `is-crawlable` and `http-status-code`.
+    - Use mobile emulation (the Lighthouse default); it is the stricter profile.
+    - Run `JEKYLL_ENV=production bundle exec jekyll build && npm run lhci` locally and record baseline scores in this file.
+    - Done when: the command runs locally and prints per-URL scores.
+  - [ ] (b) Assertions (pass/fail criteria)
+    - Category scores, as `error`: Accessibility = 1 (set to `warn` until T4.4 lands), Best Practices ≥ 0.95, SEO ≥ 0.95, Performance ≥ 0.9. Ratchet Performance to 0.95 once T5.1 is done.
+    - Metric audits, as `error`, because they are less noisy than the composite score: `largest-contentful-paint` ≤ 2500 ms, `cumulative-layout-shift` ≤ 0.1, `total-blocking-time` ≤ 200 ms.
+    - Budget: `resource-summary:total:size` ≤ 500 KB per page and `resource-summary:image:size` ≤ 300 KB (needs T5.1; start at `warn`).
+    - Turn off audits that only measure the CI static server, not the site: `uses-text-compression`, `uses-long-cache-ttl`, `uses-http2`. GitHub Pages already serves gzip/brotli and cache headers.
+    - Leave out `is-on-https`/`redirects-http`, which don't apply on localhost.
+    - Done when: a deliberate regression (e.g. removing an `<img alt>`) fails the command with a clear message, and the baseline passes.
+  - [ ] (c) CI job
+    - Add a `lighthouse` job to `ci.yml` (needs Ruby and Node setup, `JEKYLL_ENV=production` build, then `npm run lhci`), and cache the npm install. It runs in parallel with the other jobs.
+    - Set `upload.target: temporary-public-storage` to get report links in the logs, or upload `.lighthouseci/` as an artifact instead if you'd rather not publish reports.
+    - Add a step timeout (`timeout-minutes: 10`) so a hung Chrome can't stall PRs.
+    - Done when: a PR shows the job in about 2 minutes or less, and a failing assertion fails the check.
+  - [ ] (d) Stability and upkeep
+    - Google Fonts is fetched over the network during the audit, which adds variance. Once T4.3 self-hosts fonts, tighten the thresholds.
+    - If the job is flaky, raise `numberOfRuns` to 5 before loosening any threshold.
+    - Document the thresholds and how to run `npm run lhci` in CLAUDE.md (Commands) and the README (T7.4).
 
 ## Phase 6: SEO and social sharing
 
