@@ -28,7 +28,7 @@ Findings:
   - Switch to the Fonts v2 URL with `&display=swap` and add `preconnect` to `fonts.gstatic.com`.
   - Add `<meta name="theme-color">`.
   - Done when: build passes and Lighthouse has no "viewport blocks zoom" warning.
-- [ ] **T1.2 Remove dead theme code**
+- [x] **T1.2 Remove dead theme code**
   - Delete the GitHub, Download, and version blocks in `sidebar-icon-links.html` and `sidebar.html`.
   - Delete the `sidebar_home_link`/`sidebar_blog_link` branches, or set them on purpose.
   - Remove unused SVGs (e.g. `download.svg`).
