@@ -32,7 +32,7 @@ Findings:
   - Delete the GitHub, Download, and version blocks in `sidebar-icon-links.html` and `sidebar.html`.
   - Delete the `sidebar_home_link`/`sidebar_blog_link` branches, or set them on purpose.
   - Remove unused SVGs (e.g. `download.svg`).
-- [ ] **T1.3 Add missing category pages**
+- [x] **T1.3 Add missing category pages**
   - Add `category/video-games.md` and `category/gamedev.md`.
   - Optional: a build-time check (`_plugins` hook or CI script) that warns when a category has no page.
 - [ ] **T1.4 Clean up content** (after T3.1)
