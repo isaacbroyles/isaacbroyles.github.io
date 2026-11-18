@@ -19,6 +19,10 @@ There are no tests. `.github/workflows/ci.yml` runs on pull requests: it builds 
 
 The Gemfile uses Jekyll 4.3 with explicitly listed plugins (not the `github-pages` gem). Plugins are declared in the Gemfile's `:jekyll_plugins` group and enabled under `plugins:` in `_config.yml`; keep the two in sync.
 
+## Claude Code plugin
+
+The project uses the `git-workflow` plugin (the `git-workflow:github-flow` skill) from the `ai-sdlc` marketplace, declared in `.claude/settings.json` via `extraKnownMarketplaces` and `enabledPlugins`. Claude Code prompts to install it when the folder is trusted; to install manually, run `/plugin marketplace add isaacbroyles/ai-sdlc` then `/plugin install git-workflow@ai-sdlc`.
+
 ## Roadmap tasks
 
 `docs/roadmap.md` lists enhancement tasks by ID (e.g. T1.4, T2.2b), each scoped to one PR. When asked to do a roadmap task, always use the `git-workflow:github-flow` skill end to end: branch from the latest `master`, implement, commit, push, open a PR, wait for CI, merge, and clean up.
