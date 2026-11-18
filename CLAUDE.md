@@ -28,6 +28,7 @@ The Gemfile uses Jekyll 4.3 with explicitly listed plugins (not the `github-page
 - In the same PR, check off the task (`- [ ]` → `- [x]`) in `docs/roadmap.md`; for **Split** tasks, check off only the sub-task done, and the parent once all sub-tasks are done.
 - Respect stated prerequisites (e.g. "after T3.1"); if one isn't done, say so before starting.
 - Before opening the PR, run the CI checks locally where possible (`bundle exec jekyll build`, html-proofer, `npm run lint:md`) and confirm the task's "Done when" criteria.
+- Once CI passes, merge with a merge commit (`gh pr merge --merge --delete-branch`) without asking for confirmation. Still stop if a review is required or checks fail.
 
 ## Content conventions
 
