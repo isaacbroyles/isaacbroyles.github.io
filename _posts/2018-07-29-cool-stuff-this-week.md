@@ -1,5 +1,7 @@
 ---
 title: "Cool Stuff I Found This Week"
+redirect_from:
+  - /cool-stuff/2018/07/29/cool-stuff-this.week.html
 categories:
   - cool-stuff
 ---
