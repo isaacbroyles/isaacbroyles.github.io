@@ -180,6 +180,9 @@ Goals: dark mode, better reading typography, accessible links, and a stronger ho
 - [ ] **T7.6 Pin Actions to SHAs** (Dependabot keeps them current).
 - [ ] **T7.7 Privacy-friendly analytics**
   - Consider Plausible, GoatCounter, or Cloudflare Web Analytics instead of GA4; if keeping GA4, add a `/privacy` page.
+- [x] **T7.8 Declare the Claude Code plugin marketplace**
+  - Add `extraKnownMarketplaces` for `ai-sdlc` (`isaacbroyles/ai-sdlc`) to `.claude/settings.json`, so the `git-workflow@ai-sdlc` entry in `enabledPlugins` resolves on a fresh clone.
+  - Document the manual install in CLAUDE.md for anyone who dismisses the prompt.
 
 ## Phase 8: Beyond the blog
 
