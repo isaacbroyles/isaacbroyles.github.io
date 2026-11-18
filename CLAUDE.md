@@ -19,6 +19,17 @@ There are no tests. `.github/workflows/ci.yml` runs on pull requests: it builds 
 
 The Gemfile uses Jekyll 4.3 with explicitly listed plugins (not the `github-pages` gem). Plugins are declared in the Gemfile's `:jekyll_plugins` group and enabled under `plugins:` in `_config.yml`; keep the two in sync.
 
+## Roadmap tasks
+
+`docs/roadmap.md` lists enhancement tasks by ID (e.g. T1.4, T2.2b), each scoped to one PR. When asked to do a roadmap task, always use the `git-workflow:github-flow` skill end to end: branch from the latest `master`, implement, commit, push, open a PR, wait for CI, merge, and clean up.
+
+- Name the branch after the task's title in kebab-case (e.g. `clean-up-content`, `add-missing-category-pages`).
+- Put the task ID in the commit subject and PR title, e.g. `Add missing category pages for video-games and gamedev (T1.3)`.
+- In the same PR, check off the task (`- [ ]` → `- [x]`) in `docs/roadmap.md`; for **Split** tasks, check off only the sub-task done, and the parent once all sub-tasks are done.
+- Respect stated prerequisites (e.g. "after T3.1"); if one isn't done, say so before starting.
+- Before opening the PR, run the CI checks locally where possible (`bundle exec jekyll build`, html-proofer, `npm run lint:md`) and confirm the task's "Done when" criteria.
+- Once CI passes, merge with a merge commit (`gh pr merge --merge --delete-branch`) without asking for confirmation. Still stop if a review is required or checks fail.
+
 ## Content conventions
 
 - Posts live in `_posts/YYYY-MM-DD-slug.md`. `layout: post`, `excerpt_separator: <!--more-->`, and the author come from `defaults`/`author` in `_config.yml`. Front matter typically includes `title`, `date`, `last_modified_at`, `categories`, `tags`, and often an explicit `permalink` (e.g. `/art-links`). Place `<!--more-->` after the intro to control the excerpt on the paginated index (`paginate: 5`).
