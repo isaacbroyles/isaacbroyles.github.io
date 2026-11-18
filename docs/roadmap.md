@@ -35,7 +35,7 @@ Findings:
 - [x] **T1.3 Add missing category pages**
   - Add `category/video-games.md` and `category/gamedev.md`.
   - Optional: a build-time check (`_plugins` hook or CI script) that warns when a category has no page.
-- [ ] **T1.4 Clean up content** (after T3.1)
+- [x] **T1.4 Clean up content** (after T3.1)
   - Rename the `cool-stuff-this.week` file. The slug comes from the filename, so the URL changes; add `redirect_from` or a `permalink` to keep the old URL.
   - Reconcile the Unity post's dates: keep the original date, treat 2021 as `last_modified_at`.
   - Update `about.md`.
@@ -78,7 +78,7 @@ Findings:
 
 For each plugin: add it to the Gemfile `:jekyll_plugins` group and `_config.yml` `plugins:`, run `bundle lock --add-platform` if needed, and update CLAUDE.md.
 
-- [ ] **T3.1 Add `jekyll-redirect-from`** (prerequisite for T1.4).
+- [x] **T3.1 Add `jekyll-redirect-from`** (prerequisite for T1.4).
 - [ ] **T3.2 Add `jekyll-last-modified-at`** and set `fetch-depth: 0` in both workflows; remove hand-written `last_modified_at` values or keep them as overrides.
 
 ## Phase 4: Look and feel

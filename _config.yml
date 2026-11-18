@@ -23,6 +23,7 @@ webmaster_verifications:
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-seo-tag
 defaults:
