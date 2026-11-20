@@ -1,7 +1,43 @@
+{% comment %}
+  Score every other post by shared tags (2 points each) and shared categories
+  (1 point each). Show the top 3 with a score above zero, newest first on ties,
+  and fall back to the most recent posts when fewer than 3 are related.
+  Shared items = len(a) + len(b) - len(uniq(a + b)).
+{% endcomment %}
+{% assign candidates = "" | split: "" %}
+{% for post in site.posts %}
+  {% unless post.url == page.url %}
+    {% assign all_tags = post.tags | concat: page.tags | uniq %}
+    {% assign shared_tags = post.tags.size | plus: page.tags.size | minus: all_tags.size %}
+    {% assign all_cats = post.categories | concat: page.categories | uniq %}
+    {% assign shared_cats = post.categories.size | plus: page.categories.size | minus: all_cats.size %}
+    {% assign score = shared_tags | times: 2 | plus: shared_cats %}
+    {% if score > 0 %}
+      {% capture key %}{{ score | plus: 100 }}{{ post.date | date: "%Y%m%d%H%M%S" }}~{{ post.url }}{% endcapture %}
+      {% assign candidates = candidates | push: key %}
+    {% endif %}
+  {% endunless %}
+{% endfor %}
+{% assign candidates = candidates | sort | reverse %}
+
+{% assign related = "" | split: "" %}
+{% for entry in candidates limit: 3 %}
+  {% assign url = entry | split: "~" | last %}
+  {% assign match = site.posts | where: "url", url | first %}
+  {% assign related = related | push: match %}
+{% endfor %}
+{% if related.size < 3 %}
+  {% for post in site.posts %}
+    {% unless post.url == page.url or related contains post or related.size >= 3 %}
+      {% assign related = related | push: post %}
+    {% endunless %}
+  {% endfor %}
+{% endif %}
+
 <section class="related">
   <h2>Related Posts</h2>
   <ul class="posts-list">
-    {% for post in site.related_posts limit:3 %}
+    {% for post in related %}
       <li>
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">
