@@ -21,11 +21,17 @@ webmaster_verifications:
   google: DqeN0Z1Vx-FCZ-80zzg0NSTfxl2r1WYFY-Pj6vXW50Q
   bing: 413A3B73496AD7A36C780F6503A74820
 plugins:
+  - jekyll-archives
   - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-seo-tag
+jekyll-archives:
+  enabled: [tags]
+  layout: archive
+  permalinks:
+    tag: /tag/:name/
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
