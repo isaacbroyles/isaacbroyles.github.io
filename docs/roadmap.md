@@ -46,7 +46,7 @@ Findings:
 
 ## Phase 2: Information architecture and blog features
 
-- [ ] **T2.1 Real "Related Posts"**
+- [x] **T2.1 Real "Related Posts"**
   - In `related_posts.html`, score posts by shared tags and categories in Liquid, falling back to recent posts. (Alternative: hide the section when nothing shares a tag.)
 - [ ] **T2.2 Tag pages with `jekyll-archives`** (**Split**)
   - [ ] (a) Add the plugin and config for tags only, with an archive layout.
