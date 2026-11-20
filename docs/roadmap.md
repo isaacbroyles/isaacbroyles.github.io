@@ -41,7 +41,7 @@ Findings:
   - Update `about.md`.
 - [x] **T1.5 Make the 404 page useful**
   - Links to home, recent posts, and the archive (T2.4); use `layout: page`. The archive link is deferred until T2.4 lands.
-- [ ] **T1.6 Add `.editorconfig`**
+- [x] **T1.6 Add `.editorconfig`**
   - Two-space indentation, LF line endings, final newline.
 
 ## Phase 2: Information architecture and blog features
