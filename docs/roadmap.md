@@ -39,8 +39,8 @@ Findings:
   - Rename the `cool-stuff-this.week` file. The slug comes from the filename, so the URL changes; add `redirect_from` or a `permalink` to keep the old URL.
   - Reconcile the Unity post's dates: keep the original date, treat 2021 as `last_modified_at`.
   - Update `about.md`.
-- [ ] **T1.5 Make the 404 page useful**
-  - Links to home, recent posts, and the archive (T2.4); use `layout: page`.
+- [x] **T1.5 Make the 404 page useful**
+  - Links to home, recent posts, and the archive (T2.4); use `layout: page`. The archive link is deferred until T2.4 lands.
 - [ ] **T1.6 Add `.editorconfig`**
   - Two-space indentation, LF line endings, final newline.
 
@@ -56,7 +56,7 @@ Findings:
   - "N min read" in `post-meta.html` via `number_of_words | divided_by: 200`.
   - Show "Updated DATE" when `last_modified_at` differs from `date`, in a `<time datetime>` element.
 - [ ] **T2.4 Archive page** (`/archive/`)
-  - All posts grouped by year, `sidebar_link: true`.
+  - All posts grouped by year, `sidebar_link: true`. Also link it from the 404 page (deferred from T1.5).
 - [ ] **T2.5 Heading anchors**
   - Linkable h2/h3 with a hover `#`, using kramdown `auto_ids` plus a small include or `_plugins` hook. No JavaScript.
 - [ ] **T2.6 Optional table of contents**
