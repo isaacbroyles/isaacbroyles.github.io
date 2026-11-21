@@ -1,0 +1,10 @@
+# Curated list of categories shown in the sidebar, in display order.
+# `slug` must match the value used in a post's `categories` front matter.
+- slug: art
+  title: Art
+- slug: cool-stuff
+  title: Cool Stuff
+- slug: gamedev
+  title: Gamedev
+- slug: video-games
+  title: Video Games

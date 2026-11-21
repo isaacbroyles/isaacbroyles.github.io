@@ -1,12 +1,8 @@
 {% comment %}
-  Dynamically generate list of links to all category pages
+  Links to the curated categories in _data/categories.yml
 {% endcomment %}
-{% assign pages_list = site.pages|sort:"sidebar_sort_order" %}
-{% for node in pages_list %}
-  {% if node.title != null %}
-    {% if node.layout == "category" %}
-      <a class="category-link {% if page.url == node.url %} active{% endif %}"
-          href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
-    {% endif %}
-  {% endif %}
+{% for cat in site.data.categories %}
+  {% capture cat_url %}/category/{{ cat.slug }}/{% endcapture %}
+  <a class="category-link {% if page.url == cat_url %} active{% endif %}"
+      href="{{ site.baseurl }}{{ cat_url }}">{{ cat.title }}</a>
 {% endfor %}

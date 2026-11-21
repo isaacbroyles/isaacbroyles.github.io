@@ -28,10 +28,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 jekyll-archives:
-  enabled: [tags]
+  enabled: [tags, categories]
   layout: archive
   permalinks:
     tag: /tag/:name/
+    category: /category/:name/
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
