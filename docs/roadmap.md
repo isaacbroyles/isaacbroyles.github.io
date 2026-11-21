@@ -50,7 +50,7 @@ Findings:
   - In `related_posts.html`, score posts by shared tags and categories in Liquid, falling back to recent posts. (Alternative: hide the section when nothing shares a tag.)
 - [ ] **T2.2 Tag pages with `jekyll-archives`** (**Split**)
   - [x] (a) Add the plugin and config for tags only, with an archive layout.
-  - [ ] (b) Migrate categories to it and delete `category/*.md`, keeping the sidebar wiring in `category-links.html` working off `site.categories` with a curated list in `_config.yml` or `_data`.
+  - [x] (b) Migrate categories to it and delete `category/*.md`, keeping the sidebar wiring in `category-links.html` working off `site.categories` with a curated list in `_config.yml` or `_data`.
   - [ ] (c) Link tags in `post-tags.html`.
 - [ ] **T2.3 Reading time and better post meta**
   - "N min read" in `post-meta.html` via `number_of_words | divided_by: 200`.
