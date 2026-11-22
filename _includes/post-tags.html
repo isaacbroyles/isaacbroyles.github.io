@@ -1,9 +1,9 @@
 <div class="post-tags">
   {% for tag in include.post.tags %}
-    <span>
+    <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}/">
       <span class="icon">
         {% include svg/tags.svg %}
       </span>&nbsp;<span class="tag-name">{{ tag }}</span>
-    </span>
+    </a>
   {% endfor %}
 </div>
