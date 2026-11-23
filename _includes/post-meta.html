@@ -1,5 +1,15 @@
 <div class="post-meta">
-  <span class="post-date">{{ include.post.date | date_to_string }}</span>
+  <time class="post-date" datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date_to_string }}</time>
+  {% assign words = include.post.content | number_of_words %}
+  {% assign minutes = words | plus: 199 | divided_by: 200 %}
+  &bull; <span class="post-reading-time">{{ minutes | at_least: 1 }} min read</span>
+  {% if include.post.last_modified_at %}
+    {% assign date_day = include.post.date | date: "%Y-%m-%d" %}
+    {% assign mod_day = include.post.last_modified_at | date: "%Y-%m-%d" %}
+    {% if date_day != mod_day %}
+      &bull; <span class="post-updated">Updated <time datetime="{{ include.post.last_modified_at | date_to_xmlschema }}">{{ include.post.last_modified_at | date_to_string }}</time></span>
+    {% endif %}
+  {% endif %}
   <span class="post-categories">
     {% for category in include.post.categories %}
       &bull;

@@ -52,7 +52,7 @@ Findings:
   - [x] (a) Add the plugin and config for tags only, with an archive layout.
   - [x] (b) Migrate categories to it and delete `category/*.md`, keeping the sidebar wiring in `category-links.html` working off `site.categories` with a curated list in `_config.yml` or `_data`.
   - [x] (c) Link tags in `post-tags.html`.
-- [ ] **T2.3 Reading time and better post meta**
+- [x] **T2.3 Reading time and better post meta**
   - "N min read" in `post-meta.html` via `number_of_words | divided_by: 200`.
   - Show "Updated DATE" when `last_modified_at` differs from `date`, in a `<time datetime>` element.
 - [ ] **T2.4 Archive page** (`/archive/`)
