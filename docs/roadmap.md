@@ -55,7 +55,7 @@ Findings:
 - [x] **T2.3 Reading time and better post meta**
   - "N min read" in `post-meta.html` via `number_of_words | divided_by: 200`.
   - Show "Updated DATE" when `last_modified_at` differs from `date`, in a `<time datetime>` element.
-- [ ] **T2.4 Archive page** (`/archive/`)
+- [x] **T2.4 Archive page** (`/archive/`)
   - All posts grouped by year, `sidebar_link: true`. Also link it from the 404 page (deferred from T1.5).
 - [ ] **T2.5 Heading anchors**
   - Linkable h2/h3 with a hover `#`, using kramdown `auto_ids` plus a small include or `_plugins` hook. No JavaScript.
