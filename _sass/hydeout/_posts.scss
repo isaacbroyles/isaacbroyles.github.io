@@ -88,3 +88,19 @@ h2.post-title, h2.page-title {
     }
   }
 }
+// Heading permalink ("#") added by _plugins/heading_anchors.rb
+.heading-anchor {
+  margin-left: .35em;
+  font-weight: normal;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity .15s;
+}
+h2:hover > .heading-anchor,
+h3:hover > .heading-anchor,
+.heading-anchor:focus {
+  opacity: .6;
+}
+.heading-anchor:hover {
+  opacity: 1;
+}

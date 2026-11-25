@@ -57,7 +57,7 @@ Findings:
   - Show "Updated DATE" when `last_modified_at` differs from `date`, in a `<time datetime>` element.
 - [x] **T2.4 Archive page** (`/archive/`)
   - All posts grouped by year, `sidebar_link: true`. Also link it from the 404 page (deferred from T1.5).
-- [ ] **T2.5 Heading anchors**
+- [x] **T2.5 Heading anchors**
   - Linkable h2/h3 with a hover `#`, using kramdown `auto_ids` plus a small include or `_plugins` hook. No JavaScript.
 - [ ] **T2.6 Optional table of contents**
   - kramdown `{:toc}` behind front matter `toc: true`; useful for the Model Mapper and Unity posts.
