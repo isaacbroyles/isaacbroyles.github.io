@@ -104,3 +104,21 @@ h3:hover > .heading-anchor,
 .heading-anchor:hover {
   opacity: 1;
 }
+
+// Table of contents added by _plugins/table_of_contents.rb (`toc: true`)
+.toc {
+  padding: .75rem 1rem;
+  margin-bottom: $section-spacing;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+
+  ul {
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+  }
+
+  > ul {
+    padding-left: 0;
+    list-style: none;
+  }
+}
