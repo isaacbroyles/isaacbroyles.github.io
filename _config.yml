@@ -44,3 +44,7 @@ defaults:
     values:
       layout: post
       excerpt_separator: <!--more-->
+
+# Table of contents (`toc: true` in a post) lists h2 and h3 only.
+kramdown:
+  toc_levels: 2..3

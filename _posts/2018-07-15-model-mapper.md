@@ -1,6 +1,7 @@
 ---
 title: "How to effectively use Model Mapper"
 image: /assets/images/2018-07-15-model-mapper/model-mapper.png
+toc: true
 tags:
   - java
   - model mapper
