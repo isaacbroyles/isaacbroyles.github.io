@@ -2,6 +2,7 @@
 title: "Small Form Factor PC Build Part 1"
 categories:
   - video-games
+series: "Small Form Factor PC Build"
 tags:
   - pc build
 ---

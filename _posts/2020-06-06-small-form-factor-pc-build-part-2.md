@@ -6,6 +6,7 @@ date: 2020-06-06T20:18:16+0000
 permalink: /video-games/2020/06/06/small-form-factor-pc-build-part-2.html
 categories:
   - video-games
+series: "Small Form Factor PC Build"
 tags:
   - pc build
   - small form factor
