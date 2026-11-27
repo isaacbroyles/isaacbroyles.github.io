@@ -1,5 +1,6 @@
 ---
 title: "Working in GatsbyJS with Typescript Pt. 1"
+series: "GatsbyJS with Typescript"
 tags:
   - typescript
   - gatsbyjs

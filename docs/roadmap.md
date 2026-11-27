@@ -61,7 +61,7 @@ Findings:
   - Linkable h2/h3 with a hover `#`, using kramdown `auto_ids` plus a small include or `_plugins` hook. No JavaScript.
 - [x] **T2.6 Optional table of contents**
   - kramdown `{:toc}` behind front matter `toc: true`; useful for the Model Mapper and Unity posts.
-- [ ] **T2.7 Post series navigation**
+- [x] **T2.7 Post series navigation**
   - Front matter `series: <name>` plus an include listing the other parts with prev/next links (SFF PC Build, GatsbyJS).
 - [ ] **T2.8 Previous/next post links** at the bottom of `post.html` (`page.previous` / `page.next`).
 
