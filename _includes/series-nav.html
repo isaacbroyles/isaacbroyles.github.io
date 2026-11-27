@@ -10,8 +10,10 @@
     {% assign next_part = nil %}
     {% for part in parts %}
       {% if part.url == page.url %}
-        {% unless forloop.first %}{% assign prev_part = parts[forloop.index0 | minus: 1] %}{% endunless %}
-        {% unless forloop.last %}{% assign next_part = parts[forloop.index0 | plus: 1] %}{% endunless %}
+        {% assign prev_index = forloop.index0 | minus: 1 %}
+        {% assign next_index = forloop.index0 | plus: 1 %}
+        {% unless forloop.first %}{% assign prev_part = parts[prev_index] %}{% endunless %}
+        {% unless forloop.last %}{% assign next_part = parts[next_index] %}{% endunless %}
       {% endif %}
     {% endfor %}
     <nav class="series" aria-label="Series: {{ page.series }}">
