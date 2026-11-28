@@ -63,7 +63,7 @@ Findings:
   - kramdown `{:toc}` behind front matter `toc: true`; useful for the Model Mapper and Unity posts.
 - [x] **T2.7 Post series navigation**
   - Front matter `series: <name>` plus an include listing the other parts with prev/next links (SFF PC Build, GatsbyJS).
-- [ ] **T2.8 Previous/next post links** at the bottom of `post.html` (`page.previous` / `page.next`).
+- [x] **T2.8 Previous/next post links** at the bottom of `post.html` (`page.previous` / `page.next`).
 
 ## Phase 3: Plugins
 

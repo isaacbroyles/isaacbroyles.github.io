@@ -5,7 +5,7 @@
 // Each post is wrapped in `.post` and is used on default and post layouts. Each
 // page is wrapped in `.page` and is only used on the page layout.
 
-article + *, .post-body ~ section, .post-body ~ nav.series {
+article + *, .post-body ~ section, .post-body ~ nav.series, .post-body ~ nav.post-nav {
   padding-top: $section-spacing;
   border-top: 1px solid $border-color;
   margin-top: $section-spacing;
@@ -138,5 +138,18 @@ h3:hover > .heading-anchor,
 
   .series-next {
     margin-left: auto;
+  }
+}
+
+// Previous/next post links
+.post-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+
+  .post-nav-next {
+    margin-left: auto;
+    text-align: right;
   }
 }
